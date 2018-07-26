@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "tslint:latest",
+    "tslint-config-airbnb"
+  ],
+  "rules": {
+    "no-console": false,
+    "object-literal-sort-keys": false,
+    "import-name": false,
+    "no-submodule-imports": false,
+    "variable-name": false,
+    "jsx-no-multiline-js": false,
+    "jsx-no-lambda": false
+  }
+}

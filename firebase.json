@@ -1,0 +1,24 @@
+{
+  "functions": {
+    "source": "dist/functions",
+    "predeploy": [
+      "yarn lint-functions",
+      "yarn lint-app",
+      "yarn typecheck-app",
+      "yarn build-functions",
+      "yarn build-app",
+      "yarn copy-deps",
+      "yarn install-deps"        
+    ]
+  },
+  "hosting": {
+    "public": "dist/public",
+    "rewrites": [
+      {
+        "source": "**/**",
+        "function": "nextApp"
+      }
+    ],
+    "predeploy": "yarn build-public"
+  }
+}
